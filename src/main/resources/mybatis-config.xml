@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!--使用自己的配置的时候，解开以下注解，并注解下面默认内容-->
+<!--<configuration>-->
+<!--    <environments default="mysql">-->
+<!--        <environment id="mysql">-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+<!--                <property name="url" value="jdbc:mysql://ip:3306/你的数据库名?serverTimezone=GMT"/>-->
+<!--                <property name="username" value="你的用户名"/>-->
+<!--                <property name="password" value="你的密码"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+<!--    <mappers>-->
+<!--        <mapper resource="mapperxml/你的 mapper.xml 文件名"/>-->
+<!--    </mappers>-->
+<!--</configuration>-->
+
+<configuration>
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///test?serverTimezone=GMT"/>
+                <property name="username" value="root"/>
+                <property name="password" value="199944aa"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapperxml/UserMapper.xml"/>
+    </mappers>
+</configuration>
